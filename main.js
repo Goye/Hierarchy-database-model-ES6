@@ -14,6 +14,7 @@ var Node = class {
 }
 
 //Initial Object
+let result = [];
 let root = new Node(8);
 root.left = new Node(6);
 root.left.left = new Node(3);
@@ -49,4 +50,23 @@ function insert(val, node) {
             
         }
 } 
+
+//Print function
+function print(node){
+    for (let k in node) {
+        var value = node[k];
+        if (typeof value === 'object') {
+            print(value);
+        } else if (value != '') {
+            result.push(value);
+            result.sort(function (a, b) {
+                return a - b
+            });
+        }
+    }  
+}
+//Create the new Array
+print(root);
+let showMe = result;
+//console.log(showMe);
 
