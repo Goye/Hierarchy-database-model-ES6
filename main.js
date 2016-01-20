@@ -38,10 +38,15 @@ let itExists = search(8, root);
 //Insert function
 function insert(val, node) {
     let itExists = search(val, node);
-    if (itExists)
+    let firstVal = root.val;
+    if (itExists || val < 1)
         return false;
     else 
         //Math logic 
-        ;
+        if (val < firstVal) {
+            
+        } else {
+            
+        }
 } 
 
